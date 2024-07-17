@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyAssist</title>
+<link rel="shortcut icon" href="../images/motherboard.svg" type="image/x-icon">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="bg-primary p-5 mb-5 text-light d-flex justify-content-between">
+        <div>
+            <h3><i class="bi bi-motherboard me-1"></i>My Assist</h3>
+            <h5>Laboratório Geral</h5>
+        </div>
+        <div class="d-flex align-items-center">
+            <figure class="foto me-2">
+                <img src="../images/user.png" alt="Foto do funcionario 1234">
+            </figure>
+            <div>
+                <h6>Olá Funcionário</h6>
+                <h6><a href="../index.html" class="text-light">Finalizar sessão</a></h6>
+            </div>
+        </div>
+        
+    </header>
+
+    <main class="container my-4">
+
+        <section class="border rounded p-4 my-5">
+            <h2 display-6>Cadastrar o equipamento</h2>
+
+            <form id="dados" name="dados" method="get"action="">
+                <div class="row mb-3">
+                    <div class="col-md-4 my-3">
+                            <label for="proprietario" class="form-label">Proprietário</label>
+                            <input type="text" class="form-control" id="proprietario" name="proprietario" required maxlength="60" placeholder="Ex:Fulano de Tal">
+                    </div>
+                    <div class="col-md-4 my-3">
+                        <label for="equipamento" class="form-label">Tipo de equipamento</label>
+                        <select name="equipamento" id="equipamento" class="form-select" required>
+                            <option value="0" disabled selected>Selecione o equipemento</option>
+                            <option value="1">Equipemento 1</option>
+                            <option value="2">Equipemento 2</option>
+                            <option value="3">Equipemento 3</option>
+                            <option value="4">Equipemento 4</option>
+                            <option value="5">Equipemento 5</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 my-3">
+                        <label for="dataEntrada" class="form-label">Entrada laboratório</label>
+                        <input type="date" class="form-control" id="dataEntrada" name="dataEntrada" required>
+                    </div>
+                    <div class="col-12- my-3">
+                        <label for="defeito" class="form-label">Defeito</label>
+                        <textarea name="defeito" id="defeito" class="form-control" placeholder="Ex:O defeito apresentado..." required></textarea>
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <label for="dataEntrega" class="form-label">Previsão de Entrega</label>
+                        <input type="date" name="dataEntrega" id="dataEntrega" class="form-control" required>
+                    </div>
+                    
+                    <div class="col-md-6 my-3">
+                        <label for="status" class="form-label">Status do conserto</label>
+                        <select class="form-select" name="status" id="status" required>
+                            <option value="0">Selecione o status</option>
+                            <option value="1">Aguardando aprovação</option>
+                            <option value="2">Aguardando orçamento</option>
+                            <option value="3">Em conserto</option>
+                            <option value="4">Finalizado</option>
+                        </select>
+                    </div>
+                    <div class="col-12- my-3">
+                        <label for="observacao" class="form-label">Observações</label>
+                        <textarea name="observacao" id="observacao" class="form-control" placeholder="Ex:O equipamento.."></textarea>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-2 mb-3">
+                        <button type="submit" class="btn btn-primary">Cadastrar Equipamento >></button>
+                    </div>
+
+            </form>
+        </section>
+
+        <section class="border rounded p-4 my-5">
+            <h2 display-6>Realizar Busca</h2>
+            <form action="" method="get" id="formBusca" name="formBusca" class="mb-4">
+                <div class="my-2 d-flex">
+                    <input type="search" class="form-control  me-2" type="text" id="txtBusca" name="textBusca" placeholder="Buscar aparelho..." required>
+                    <button class="btn btn-primary">Buscar</button>
+                </div>
+            </form>
+            <h2 class="display-6">Resultado da Busca</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Código</th>
+                            <th>Prietário</th>
+                            <th>Entrada</th>
+                            <th>Defeito</th>
+                            <th>Entrega</th>
+                            <th>Status</th>
+                            <th>Observações</th>
+                            <th>Sistema</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Jimmy Page</td>
+                            <td>20/05/2024</td>
+                            <td>Fio com mal contato</td>
+                            <td>30/05/2024</td>
+                            <td>Em conserto</td>
+                            <td>Orçamento aprovado</td>
+                            <td><a href="">Alterar dados</a></td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>Robert Plant</td>
+                            <td>16/05/2024</td>
+                            <td>Timer não funciona</td>
+                            <td>26/05/2024</td>
+                            <td>Em conserto</td>
+                            <td>Orçamento aprovado</td>
+                            <td><a href="">Alterar dados</a></td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>John Bonhan</td>
+                            <td>16/05/2024</td>
+                            <td></td>
+                            <td></td>
+                            <td>Em conserto</td>
+                            <td>Sem retorno do cliente</td>
+                            <td><a href="">Alterar dados</a></td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="table table-striped text-center">
+                        <tr>
+                            <td colspan="8">Dados atualizados em 20/05/2024</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

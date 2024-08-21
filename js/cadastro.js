@@ -4,7 +4,7 @@ async function cadastrar() {
 
 
 
-    fetch("http://localhost:8080/usuario/cadastro,{
+    fetch("http://localhost:8080/usuario/cadastrar,{
         method:"POST",
         headers: {"Content-type": "application/json; charset=UTF-8"},
         body: JSON.stringify({

@@ -23,11 +23,15 @@
 
     <!-- Meu JS -->
     <script src="js/login.js"></script>
+    <script src="js/cadastro.js"></script>
+    <script src="js/os.js"></script>
+    <script src="js/agendamento.js"></script>
 
 </head>
 
 <body>
     <!--------------- menu de navegação --------------->
+    
     <nav class="navbar navbar-expand-lg my-3">
         <div class="container">
             <a class="navbar-brand icon-logo" href="#"><i class="bi bi-motherboard"></i> MyAssist</a>
@@ -38,16 +42,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#serviços">Serviços</a>
-                    </li>
+                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Categorias
+                            Serviços
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Casa</a></li>
+                            <li><a class="dropdown-item" href="#">Eletrodomésticos</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -57,6 +59,7 @@
                             </li>
                             <li><a class="dropdown-item" href="#">Computadores</a></li>
                         </ul>
+                        
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href=""
@@ -69,7 +72,7 @@
 
 
     <!-- Modal Login-->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" >
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -111,7 +114,7 @@
 
     <!-- Modal Cadastro-->
 
-    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="exampleModalLabel">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -136,12 +139,8 @@
                             Usuário ou senha incorreto!
                         </div>
 
-                        <div class="modal-footer justify-content-end">
-                            <ul class="nav nav-pills">
-                                <li class="nav-item">
-                                    <a class="nav-link fs-9 ms-0 mb-0 mb-lg-0" href="" data-bs-toggle="modal" data-bs-target="#cadastroModal">Cadastro de usuário</a>
-                                </li>
-                            </ul>
+                        <div class="modal-footer justify-content-end">                       
+                            
                             <button type="button" onclick="cadastrar()" class="btn btn-primary ">Cadastrar</button>
                         </div>
                     </form>
@@ -161,8 +160,9 @@
 
             <div class="col-md-6 text-center">
                 <h2 class="display-6 my-3">A melhor assistência técnica de São Paulo</h2>
-                <p class="lead my-4 w-75 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium dolores voluptatem.</p>
-                <button href="" class="btn btn-primary">Mais informações >></button>
+                <p class="lead my-4 w-75 mx-auto">Oferecemos assistência técnica especializada, com reparo com uso de peças originais e garantia de serviço. Contamos com profissionais qualificados e constantemente treinados.</p>
+                <p class="lead my-4 w-75 mx-auto">Evite filas e faça um pré-agendamento antes de deslocar-se ao Centro de Serviço para realizar a Assistência Técnica de seu smartphone, tablet ou notebook.</p>
+                <button class="btn btn-primary" data-bs-toggle="modal" href="#preAgendamentoModal">Mais informações aqui</button>
             </div>
 
 
@@ -177,63 +177,55 @@
         <div class="row">
 
             <!--------1º. card------->
-            <div class="col-md-6 col-lg-3 my-2">
+            <div class="col-md-6 col-lg-4 my-2">
                 <div class="card" >
-                    <img src="./images/notebook.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">Notebook</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Mais informações</a>
-                    </div>
-                    </div>
+                    <img src="./images/Computação.jpg" class="card-img-top" alt="...">
+                    <a href="#" class="btn btn-primary">Computadores</a>
+                </div>
             </div>
             <!------Fim 1º. card------->
 
             <!--------2º. card------->
-            <div class="col-md-6 col-lg-3 my-2">
+            <div class="col-md-6 col-lg-4 my-2">
                 <div class="card" >
-                    <img src="./images/tablets.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">Tablets</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Mais informações</a>
-                    </div>
-                    </div>
+                    <img src="./images/Eletrodomesticos.jpg" class="card-img-top" alt="...">
+                    <a href="#" class="btn btn-primary">Eletrodomésticos</a>
+                </div>
             </div>
             <!------Fim 2º. card------->
 
             <!--------3º. card------->
-            <div class="col-md-6 col-lg-3 my-2">
+            <div class="col-md-6 col-lg-4 my-2">
                 <div class="card" >
-                    <img src="./images/celulares.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">Celulares</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Mais informações</a>
-                    </div>
-                    </div>
+                    <img src="./images/eletronico.jpg" class="card-img-top" alt="...">
+                    <a href="#" class="btn btn-primary">Eletrônicos</a>
+                </div>
             </div>
-            <!------Fim 3º. card------->
-
-            <!--------4º. card------->
-            <div class="col-md-6 col-lg-3 my-2">
-                <div class="card" >
-                    <img src="./images/videogame.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">Videogames</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Mais informações</a>
-                    </div>
-                    </div>
-            </div>
-            <!------Fim 4º. card------->
-
-        </div>
-
-
-    </main>
+            <!------Fim 3º. card------->   
+    
 
     <!--------Fim Cards------->
+
+    <!-- Modal Pré-agendamento-->
+
+    <div class="modal fade" id="preAgendamentoModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="preAgendamentoModalLabel">ATENÇÃO</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead my-4 w-75 mx-auto">Pré-agendamento somente para smartphone, tablets e notebooks.</p>
+                    <div class="modal-footer justify-content-end">                       
+                        <button type="button" onclick="agendar()" class="btn btn-primary ">Agendar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </main>
 
     <footer class="bg-primary py-5 text-light text-center">
         <h5>MyAssist - Todos os direitos reservados - 2024</h5>

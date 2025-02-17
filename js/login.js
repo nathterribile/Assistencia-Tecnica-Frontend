@@ -4,20 +4,19 @@ async function autenticar() {
     fetch("http://localhost:8080/usuario/login?usuario="+login+"&senha="+senha,{
     method:"POST"
     })
-        .then(
-            (response) => {
-                if (response.ok) {
-                    window.location.replace("./pages/admin.html");
-                }
-                return Promise.reject(response)
+    .then(
+        (response) => {
+            if (response.ok) {
+                window.location.replace("./pages/admin.html");
             }
-        ).catch((response) => {
-            if (response.status == 401) {
-                document.getElementById("login_error").style.visibility = "visible";
-            } else {
-                document.getElementById("login_error").style.visibility = "visible";
-                document.getElementById("login_error").value = response;
-            }
+            return Promise.reject(response)
+        }
+    ).catch((response) => {
+        if (response.status == 400) {
+            new bootstrap.Toast(document.getElementById('toast400Logar')).show();
+        } else {
+            new bootstrap.Toast(document.getElementById('toast500Logar')).show();                           
+        }
 
     });
 }

@@ -22,7 +22,25 @@ async function filtrarAparelho() {
             option.textContent = item;
             secondSelect.appendChild(option);
         });
+        
+        const selectedBrand = secondSelect.value;
+        thirdSelect = document.getElementById('modelo');
+        const modelos = Object.values(equipamentos[selectedDevice][selectedBrand]);
+        
+
+        // Clear existing options
+        thirdSelect.innerHTML = '';
+
+        // Populate new options
+        modelos.forEach(item => {
+            const choice = document.createElement('option');
+            choice.value = item;
+            choice.textContent = item;
+            thirdSelect.appendChild(choice);
+        });
     }
+
+
 
 async function filtrarMarca() {
         

@@ -1,0 +1,26 @@
+{
+  "name": "assistencia-tecnica-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/nathterribile/Assistencia-Tecnica-Frontend#readme",
+  "bugs": {
+    "url": "https://github.com/nathterribile/Assistencia-Tecnica-Frontend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathterribile/Assistencia-Tecnica-Frontend.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "moment": "^2.30.1"
+  }
+}

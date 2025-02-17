@@ -13,3 +13,8 @@ textarea{
     height:150px;
 }
 
+.container-fluid
+{
+    width:100px !important;
+}
+

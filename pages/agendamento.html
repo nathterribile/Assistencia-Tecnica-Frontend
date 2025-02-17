@@ -8,15 +8,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/styles.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script><link rel="stylesheet" href="../css/styles.css">
 
     <!-- Meu JS -->
     <script src="../js/filtroAparelhos.js"></script>
+    <script src="../js/agendamento.js"></script>
 </head>
 <body>
     <header class="bg-primary p-5 mb-5 text-light d-flex justify-content-between">
         <div>
-            <h3><i class="bi bi-motherboard me-1"></i>My Assist</h3>
+            <h3><i class="bi bi-motherboard me-1"></i>MyAssist</h3>
             <h5><i class="text-right me-1"></i>Pré-agendamento</h5>
         </div>
         
@@ -65,7 +75,28 @@
                         <textarea name="defeito" id="defeito" class="form-control" placeholder="Ex:O defeito apresentado..." required></textarea>
                     </div>      
                     <div class="d-flex justify-content-end mt-2 mb-3">
-                        <button type="submit" class="btn btn-primary">Agendar</button>
+                        <button type="submit" class="btn btn-primary" onclick="agendar(); return false">Agendar</button>
+                        <div class="toast align-items-center text-white bg-danger w-50" role="alert" aria-live="assertive" aria-atomic="true" id="toast500Agendar">
+                            <div class="d-flex" data-bs-theme="dark">                                 
+                                <p class="my-auto ms-2 p-2">Serviço indisponivel!</p>                                  
+                              <button type="button" class="btn-close btn-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Agendamento Confirmado-->
+
+                    <div class="modal fade" id="agendamentoConfirmadoModal" tabindex="-1" aria-labelledby="exampleModalLabel" >
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Agendamento confirmado!</h1>
+                                    <button id="fecharModalAgendamento" type="button" class="btn-close" data-bs-dismiss="agendamentoConfirmadoModal" aria-label="Close" onclick="direcionamentoOnboarding()"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p id="dataAgendada" class="my-auto ms-2 p-2"></p>  
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
             </form>

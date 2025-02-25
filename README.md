@@ -43,8 +43,12 @@ It will start on port: 8080. To not get in conflict with backend project run, it
 For change the port of the frontend project running to 1200.
 ## Screenshots
 
+https://github.com/user-attachments/assets/9f9105d1-f2a6-40ae-aa5c-b82df5c54410
 
-![25.02.2025_16.07.14_REC.mp4](25.02.2025_16.07.14_REC.mp4)
+
+
+https://github.com/user-attachments/assets/47f2856f-0783-43a8-838b-d62620da863e
+
 
 
 

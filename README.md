@@ -54,4 +54,4 @@ https://github.com/user-attachments/assets/47f2856f-0783-43a8-838b-d62620da863e
 
 ## Autor
 
-- [@nathterribile]([https://github.com/nathterribile/Assistencia-Tecnica-Frontend))
+- [@nathterribile]([https://github.com/nathterribile/Assistencia-Tecnica-Frontend]))

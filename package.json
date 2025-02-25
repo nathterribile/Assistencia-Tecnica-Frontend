@@ -22,5 +22,8 @@
   },
   "dependencies": {
     "moment": "^2.30.1"
+  },
+  "server": {
+    "port": 4200
   }
 }

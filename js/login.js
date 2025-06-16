@@ -1,7 +1,7 @@
 async function autenticar() {
     const login = document.getElementById("user").value;
     const senha = document.getElementById("password").value;
-    fetch("http://172.29.208.1:8080/usuario/login?usuario="+login+"&senha="+senha,{
+    fetch("https://172.29.208.1:8080/usuario/login?usuario="+login+"&senha="+senha,{
     method:"POST"
     })
     .then(

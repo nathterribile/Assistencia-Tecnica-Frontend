@@ -25,7 +25,7 @@ async function agendar() {
         
     };
 
-    const response = await fetch("https://172.29.208.1:8080/os", {
+    const response = await fetch("https://172.29.208.1:8443/os", {
         method: "POST",
         headers:{
                 "Accept": "application/json",

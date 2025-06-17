@@ -52,7 +52,7 @@ async function getAll() {
                 const botaoAlterar = document.getElementById('botaoAlterar');
                 botaoAlterar.removeAttribute("hidden");
                 botaoAlterar.setAttribute("type","submit");
-                botaoAlterar.setAttribute("onclick","update("+body.id+"); return false");
+                botaoAlterar.setAttribute("onclick","update("+body.id+"); return false;");
                 document.getElementById("proprietario").value = body.proprietario;
                 document.getElementById("equipamento").value = body.tipoEquipamento;
                 document.getElementById("dataEntrada").value = body.entradaLab;

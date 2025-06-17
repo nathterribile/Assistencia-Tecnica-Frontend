@@ -1,5 +1,5 @@
 async function getAll() {
-    let response = await fetch("https://172.29.208.1:8080/os")
+    let response = await fetch("https://172.29.208.1:8443/os")
 
     if (response.ok) {
         let body = await response.json()
@@ -82,7 +82,7 @@ async function get(id) {
     
     }else{
 
-        let response = await fetch("https://172.29.208.1:8080/os/"+id)
+        let response = await fetch("https://172.29.208.1:8443/os/"+id)
 
         if (response.ok) {
             let body = await response.json()
@@ -169,7 +169,7 @@ async function save() {
     };
 
 
-    const response = await fetch("https://172.29.208.1:8080/os", {
+    const response = await fetch("https://172.29.208.1:8443/os", {
         method: "POST",
         headers:{
                 "Accept": "application/json",
@@ -216,7 +216,7 @@ async function update(id) {
         observacoes: obs
     };
 
-    const response = await fetch("https://172.29.208.1:8080/os/"+id, {
+    const response = await fetch("https://172.29.208.1:8443/os/"+id, {
         method: "PUT",
         headers: {
             'Content-Type': 'application/json'

@@ -53,13 +53,13 @@ async function getAll() {
                 botaoAlterar.removeAttribute("hidden");
                 botaoAlterar.setAttribute("type","submit");
                 botaoAlterar.setAttribute("onclick","update("+body.id+"); this.style.display='none'; return false;");
-                document.getElementById("proprietario").value = body.proprietario;
-                document.getElementById("equipamento").value = body.tipoEquipamento;
-                document.getElementById("dataEntrada").value = body.entradaLab;
-                document.getElementById("defeito").value = body.defeito;
-                document.getElementById("dataEntrega").value = body.previsaoEntrega;
-                document.getElementById("status").value = body.statusConcerto;
-                document.getElementById("observacao").value = body.observacoes;
+                document.getElementById("proprietario").value = item.proprietario;
+                document.getElementById("equipamento").value = item.tipoEquipamento;
+                document.getElementById("dataEntrada").value = item.entradaLab;
+                document.getElementById("defeito").value = item.defeito;
+                document.getElementById("dataEntrega").value = item.previsaoEntrega;
+                document.getElementById("status").value = item.statusConcerto;
+                document.getElementById("observacao").value = item.observacoes;
                 
                 const table = document.getElementById('osCadastradas');
                 const tBody = table.getElementsByTagName('tbody')[0];

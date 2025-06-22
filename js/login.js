@@ -1,7 +1,7 @@
 async function autenticar() {
     const login = document.getElementById("user").value;
     const senha = document.getElementById("password").value;
-    fetch("https://172.29.208.1:8443/usuario/login?usuario="+login+"&senha="+senha,{
+    fetch("https://myassist-backend-cahyf9d8chcwcxd0.brazilsouth-01.azurewebsites.net/usuario/login?usuario="+login+"&senha="+senha,{
     method:"POST"
     })
     .then(

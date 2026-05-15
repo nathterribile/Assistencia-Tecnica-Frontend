@@ -25,7 +25,7 @@ async function agendar() {
         
     };
 
-    const response = await fetch("https://myassist-backend-cahyf9d8chcwcxd0.brazilsouth-01.azurewebsites.net/os", {
+    const response = await fetch("http://147.15.121.92:8080/os", {
         method: "POST",
         headers:{
                 "Accept": "application/json",
